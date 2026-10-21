@@ -1,0 +1,12 @@
+{
+  "name": "vatly12-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web ôn Vật lí 12: bài học, luyện tập, thi thử, lưu lịch sử làm bài cho từng học sinh",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js",
+    "admin": "node --disable-warning=ExperimentalWarning server/admin.js"
+  }
+}
