@@ -1,0 +1,6 @@
+# Caddy tự xin và gia hạn chứng chỉ HTTPS miễn phí (Let's Encrypt) cho tên miền trong biến DOMAIN.
+{$DOMAIN} {
+	encode gzip
+	header Strict-Transport-Security "max-age=31536000"
+	reverse_proxy app:3000
+}

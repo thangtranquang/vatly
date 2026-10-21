@@ -1,0 +1,17 @@
+# Chạy thử bằng địa chỉ IP, không có tên miền và không có HTTPS:
+#   docker compose -f docker-compose.ip.yml up -d --build
+# Chỉ nên dùng để thử. Khi dùng thật, hãy dùng docker-compose.yml (có HTTPS).
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      COOKIE_SECURE: "false"
+      TRUST_PROXY: "false"
+    ports:
+      - "80:3000"
+    volumes:
+      - app-data:/app/data
+
+volumes:
+  app-data:
